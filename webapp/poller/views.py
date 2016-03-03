@@ -1,12 +1,12 @@
 #from django.shortcuts import render
 
 # Create your views here.
-
+from django.conf import settings
 from django.http import HttpResponse
 from django.template import loader
 from .models import Job
 import redis
-r = redis.Redis()
+r = redis.Redis(host=settings.REDIS_HOST,port=settings.REDIS_PORT,db=0)
 REDIS_QUEUE = 'input_queue'
 
 def index(request):
