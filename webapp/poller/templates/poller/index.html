@@ -1,0 +1,13 @@
+<h3>
+    {{ output }}
+    {% if job_id %}
+    <a href="/poller/{{job_id}}">Your job has been queued, to see the status/results click here</a>
+    {% endif %}
+</h3>
+ <form>
+  First Input:<br>
+  <input type="text" name="inp1"><br>
+  Second Input:<br>
+  <input type="text" name="inp2"><br>
+  <input type="submit" value="Submit">
+</form> 
